@@ -1,6 +1,6 @@
 import {Category} from './enums'
 import {Book, Librarian} from './interfaces'
-import {UniversityLibrarian, ReferenceItem} from './classes'
+import {UniversityLibrarian, Encyclopedia} from './classes'
 
 
 showHello('greeting', 'TypeScript');
@@ -111,16 +111,6 @@ favoriteLibrarian.name = 'Anna';
 // favoriteLibrarian.assistCustomer('Andrey');
 
 // Task 05
-class Encyclopedia extends ReferenceItem {
-  constructor(title: string, year: number, public edition: number) {
-    super(title, year);
-  }
-
-  printItem() {
-    super.printItem();
-    console.log(`Edition: edition (${this.year})`);
-  }
-}
 
 
 const refBook = new Encyclopedia('My Title', 2018, 100);
